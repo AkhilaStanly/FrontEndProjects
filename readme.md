@@ -1,3 +1,7 @@
+Written by Akhila Stanly
+CPSC-349 Final Project 
+May 15 2022
+
 Dependencies needed:
 
 Please run the following from root directory
