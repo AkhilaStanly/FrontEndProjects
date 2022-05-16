@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs')%>
+</head>
+<body>
+<%- include('includes/navigation.ejs')%>
+        <form action="/admin/add-movie" method="post" class="movie-form">
+            <div class="form-control">
+                <label for="movieName">Movie Name</label>
+                <input type="text" name="movieName">
+            </div>
+            <div class="form-control">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" name="imageUrl">
+            </div>
+            <div class="form-control">
+                <label for="year">Release Year</label>
+                <input type="number" name="year">
+            </div>
+            <div class="form-control">
+                <label for="director">Director(s)</label>
+                <input type="text" name="director">
+            </div>
+            
+            <button class="btn"type="submit">Add Movie</button>
+        </form>
+<%- include('includes/end.ejs')%>

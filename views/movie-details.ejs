@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs')%>
+</head>
+<body>
+<%- include('includes/navigation.ejs')%>
+    <main class="centered">
+        <h1><%=movie.movieName %></h1>
+        <hr>
+        <div>
+            <img src="<%=movie.imageUrl %>" alt="<%=movie.movieName %>">
+        </div>
+        <h2><%=movie.year %></h2>
+        <h2><%=movie.director %></h2>
+        <div>
+            <a href="/admin/edit-movie/<%=movie._id %>">Edit movie</a>
+            <br><br>
+            <form action="/admin/delete-movie" method="post">
+                <input type="hidden" name="id" value="<%=movie._id %>">
+                <button class="btn" type="submit">Delete Movie</button>
+            </form>
+        </div>
+    </main>
+<%- include('includes/end.ejs')%>

@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs')%>
+</head>
+<body>
+<%- include('includes/navigation.ejs')%>
+        <form action="/admin/edit-movie" method="post" class="movie-form">
+            <div class="form-control">
+                <label for="movieName">Movie Name</label>
+                <input type="text" name="movieName" value="<%=movie.movieName %>">
+            </div>
+            <div class="form-control">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" name="imageUrl" value="<%=movie.imageUrl %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Release Year</label>
+                <input type="number" name="year" value="<%=movie.year %>">
+            </div>
+            <div class="form-control">
+                <label for="director">Director</label>
+                <textarea name="director" rows="5" ><%=movie.director %></textarea>
+            </div>
+            <div>
+                <input type="text" name="id" hidden value="<%=movie._id %>">
+            </div>
+
+            <button class="btn"type="submit">Submit Movie</button>
+        </form>
+<%- include('includes/end.ejs')%>

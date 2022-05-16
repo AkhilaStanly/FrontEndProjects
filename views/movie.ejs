@@ -1,0 +1,27 @@
+<%- include('includes/head.ejs')%>
+      <link rel="stylesheet" href="/css/movie.css">
+  </head>
+  <body>
+<%- include('includes/navigation.ejs')%>
+        <%if(movies.length>0) { %>
+        <div class="grid">
+            <%for(let movie of movies) { %>
+          <article class="card movie-item">
+              <header class="card__header">
+                  <h1 class="movie__title"><a href="movie/<%=movie._id %>"><%=movie.movieName %></a></h1>
+              </header>
+              <div class="card__image">
+                  <img src="<%=movie.imageUrl %>" alt="apple" width="100">
+              </div>
+              <div class="card__content">
+                  <h3 class="movie__year"><%=movie.year %></h3>
+                  <h3 class="movie__director"><%=movie.director %></h3>
+              </div>
+              
+          </article>
+          <%} %>
+        </div>
+        <%} else { %>  
+            <h1>No movies exist</h1>
+            <%} %>
+<%- include('includes/end.ejs')%>
